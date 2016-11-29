@@ -1,0 +1,216 @@
+{% load staticfiles %}
+<!DOCTYPE HTML>
+<html lang="en" ng-app="Wolfgang">
+<head>
+    <base href="/">
+    <meta charset="UTF-8">
+    <title>Wolfgang Douglas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+<!--Favicon  -->
+    <link rel="icon" href='{% static "img/favicon.png" %}' type="image/png">
+<!--CSS  -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.min.css">
+    <link rel="stylesheet" href='{% static "css/main.css" %}'>
+    <link rel="stylesheet" href='{% static "css/style.css" %}'>
+</head>
+
+<body>
+<!--Mobile/Ipad Navigation  -->
+<nav class="transparent z-depth-0 hide-on-large-only">
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo center">
+        <img src='{% static "img/logo.jpg" %}' class="mobLogo"></a>
+      <ul id="nav-mobile" class="left">
+        <li><a style="color:black;"href="#" data-activates="slide-out" class="button-collapse hide-on-large-only"><i class="material-icons">menu</i></a></li>
+      </ul>
+    </div>
+</nav>
+
+<ul id="slide-out"class="center side-nav  z-depth-0">
+    <!--Logo  -->
+    <li>
+        <div class="userView">
+        <a href="/"><img class="responsive-img sideLogo" src="{% static 'img/logo.jpg' %}">
+        </a>
+        </div>
+    </li>
+    <!--  Home    -->
+    <li class="sideNav">
+        <a href="/">
+            HOME
+        </a>
+    </li>
+    
+    <!--Media  -->
+    <li class="sideNav">
+        <a href="" class='dropdown-button btn white z-depth-0' data-beloworigin="true" data-gutter="15" data-activates='dropdown4'>
+        MEDIA
+        </a>
+    </li>
+    <!-- Media DropMenu     -->
+    <ul id='dropdown4' class='dropdown-content'>
+        <!--Instagram      -->
+        <li class="dropMenu">
+            <a href="http://instagram.com/wolfgangdouglas">
+                <i class="fi-social-instagram"></i>
+                <div>INSTAGRAM</div>
+            </a>
+        </li>
+        <!--Facebook  -->
+        <li class="dropMenu">
+            <a href="https://www.facebook.com/Wolfgang-Douglas-213532462311997/timeline">
+                <i class="fi-social-facebook"></i>
+                <div>FACEBOOK</div>
+            </a>
+        </li>
+
+        <li class="dropMenu">
+            <a href="http://twitter.com/wolfgangdouglas">
+                <i class="fi-social-twitter"></i>
+                <div >TWITTER</div>
+            </a>
+        </li>
+
+    </ul>
+
+    <!--Shop  -->
+    <li class="sideNav">
+        <a href="/shop">
+        SHOP
+        </a>
+    </li>
+    <!--About  -->
+    <li class="sideNav">
+        <a href="/about">
+        ABOUT
+        </a>
+    </li>
+    <!--Contact  -->
+    <li class="sideNav">
+        <a href="/contact">
+        CONTACT
+        </a>
+    </li>
+
+    <li class="sideNav" style="padding-top:15px !important;">
+        <img src="{% static 'img/spotify.png' %}" class="responsive-img" style="width:50px;"> 
+        <img src="{% static 'img/apple.png' %}" class="responsive-img" style="width:50px;"> 
+        <img src="{% static 'img/itunes.png' %}" class="responsive-img" style="width:50px;"> 
+        <img src="{% static 'img/youtube.png' %}" class="responsive-img" style="width:50px;"> 
+    </li>
+
+
+</ul>
+
+<!--Desktop Navigation  -->
+<div class="hide-on-med-and-down navbar-fixed">
+<nav class="white z-depth-0">
+    <div class="nav-wrapper">
+
+
+      <a href="/" class="brand-logo center">
+      <img src="static/img/logo.jpg" class="responsive-img">   
+      </a>
+
+      <ul>
+        <li>
+            <a style="padding-right:60px;"href="sass.html">
+                <img style="width:50px;"class="responsive-img"src='{% static "img/spotify.png" %}'> 
+            </a>
+        </li>
+        <li>
+            <a style="padding-right:60px;"href="sass.html">
+                <img style="width:50px;"class="responsive-img"src='{% static "img/apple.png" %}'> 
+            </a>
+        </li>
+        <li>
+            <a style="padding-right:60px;" href="sass.html">
+                <img style="width:50px;"class="responsive-img"src='{% static "img/itunes.png" %}'> 
+            </a>
+        </li>
+        <li>
+            <a href="sass.html">
+                <img style="width:50px;"class="responsive-img"src='{% static "img/youtube.png" %}'> 
+            </a>
+        </li>
+      </ul>
+
+      <!--Right Side  -->
+      <ul class="right rightSide">
+        <li><a href="/">HOME</a></li>
+        <li><a href="about" style="padding-left:38px;">ABOUT</a></li>
+        <li><a class='media dropdown-button btn white z-depth-0' data-beloworigin="true" data-gutter="15" data-activates='dropdown5' href="">MEDIA</a></li>
+        <li><a href="contact">CONTACT</a></li>
+        <li><a href="shop" style="padding-left:38px">SHOP</a></li>
+      </ul>
+
+    <!-- Media DropMenu     -->
+    <ul id='dropdown5' class='dropdown-content mediaDrop'>
+        <!--Instagram      -->
+        <li>
+            <a class="center"href="http://instagram.com/wolfgangdouglas">
+                <i class="fi-social-instagram"></i>
+                <p>INSTAGRAM</p>
+            </a>
+        </li>
+        <!--Facebook  -->
+        <li>
+            <a class="center" href="https://www.facebook.com/Wolfgang-Douglas-213532462311997/timeline">
+                <i class="fi-social-facebook"></i>
+                <p>FACEBOOK</p>
+            </a>
+        </li>
+
+        <li>
+            <a class="center" href="http://twitter.com/wolfgangdouglas">
+                <i class="fi-social-twitter"></i>
+                <p>TWITTER</p>
+            </a>
+        </li>
+
+    </ul>
+
+
+    </div>
+</nav>
+</div>
+
+<!--Views  -->
+ {% block content %}{% endblock content %}
+<script> window.csrf_token = "{{ csrf_token }}"; </script>
+
+<!--Footer  -->
+<footer>
+    <div class="center-align">
+    Wolfgang Douglas 2016 Copyright © All rights reserved.
+    </div>
+</footer>
+
+<!--Javascript  -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+<script src='{% static "js/angular/angular.min.js" %}'></script>
+<script src='{% static "js/angular-ui-router/release/angular-ui-router.min.js" %}'></script>
+<!--AngularScripts  -->
+<script src='{% static "js/controllers/core.js" %}'></script>
+<script src='{% static "js/routes/route.js" %}'></script>
+<script src='{% static "js/services/service.js" %}'></script>
+<!--Controllers  -->
+<script src='{% static "js/controllers/contactCtrl.js" %}'></script>
+<script src='{% static "js/controllers/homeCtrl.js" %}'></script>
+<script src='{% static "js/controllers/shopCtrl.js" %}'></script>
+<script>
+$( document ).ready(function() {
+    $(".button-collapse").sideNav();
+    $(".dropdown-button").dropdown({
+        constrain_width: false,  
+        gutter: 0, 
+        belowOrigin: true         
+    });
+});
+</script>
+
+</body>
+</html>
