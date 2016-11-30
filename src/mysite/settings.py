@@ -13,7 +13,7 @@ SECRET_KEY = '60pdv1l^0p32^jb+iw)88br!wg@73uav^rwo5&(*wy#)og-f&2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost','34.193.92.3']
+ALLOWED_HOSTS = ['localhost','34.193.92.3','www.wolfgangdouglas.com','wolfgangdouglas.com']
 
 #Email Settings
 EMAIL_HOST = 'smtp.gmail.com'
@@ -31,11 +31,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     # 3rd-Party Apps
     'rest_framework',
     #My Apps
     'contact',
 ]
+
+SITE_ID = 1
 
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
@@ -133,9 +136,7 @@ REST_FRAMEWORK = {
             'rest_framework.authentication.SessionAuthentication',
             'rest_framework.authentication.BasicAuthentication',
     ),
-    # 'DEFAULT_RENDERER_CLASSES':(
-            # 'rest_framework.renderers.JSONRenderer'
-    # )
+
 }
 
 #Admin

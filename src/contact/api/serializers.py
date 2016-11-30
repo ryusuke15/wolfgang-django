@@ -18,7 +18,7 @@ class ContactCreateSerializer(serializers.Serializer):
         subject = 'Contact Notification from'+ ' '+ form_name
         from_email = settings.EMAIL_HOST_USER
         body  = 'Name: %s<br/>Contact: %s<br/>Message: %s<br/>'%(form_name, form_email,form_message)
-        to = 'ryusukelavalla@gmail.com'    
+        to = 'info@wolfgangdouglas.com'    
         html_content = body
         text_content = 'This is an example'
         msg = EmailMultiAlternatives(
