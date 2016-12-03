@@ -1,0 +1,135 @@
+/*Mobile/Tablet Navigation  */
+.mobLogo{
+    height:63px;
+    padding-top:10px;
+}
+.sideLogo{
+    height:257px;
+}
+.sideNav{
+    background-color:transparent;
+}
+.sideNav a{
+    color:black !important;
+    font-weight:bold !important;
+}
+.dropMenu{
+    background-color:white;
+}
+.dropMenu a{
+    background-color:white;
+    padding-left:47px !important;
+}
+.dropMenu i{
+    font-size:24px;
+    color:black !important;
+}
+.dropMenu div{
+    padding-top:12px;
+    color:black
+}
+
+/*Footer  */
+footer{
+    font-weight:bold;
+}
+/*Home  */
+.videoTop{
+    padding-top:8px;
+}
+.videoSpacing{
+    padding-bottom:10px;
+}
+/*About  */
+.aboutText h3{
+    font-family:italic;
+}
+.aboutImage{
+    padding:0px !important;
+}
+
+/*Contact  */
+.contactSection{
+    padding-bottom:36px;
+}
+.contactImage{
+    padding:0px !important;
+}
+
+/*Shop  */
+.comingSoon{
+    padding-top:150px;
+    padding-bottom:200px;
+
+}
+
+.shopSection{
+    padding-top:83px;
+    padding-bottom:15px;
+}
+.shopSection img{
+    height:300px;
+    width:300px;
+}
+.shopSection h6{
+    padding-top:15px;
+    padding-bottom:15px;
+    font-size:28px;
+}
+
+.shopSection button{
+    color:black;
+    height:40px;
+    border-style:solid;
+}
+.shopSection a{
+    color:black;
+}
+
+@media only screen and (min-width : 768px) {
+    .aboutText{
+        padding-top:76px !important;
+        padding-bottom:76px !important;
+    }
+}
+
+@media only screen and (min-width : 992px) {
+    nav{
+        height:120px !important;
+    }    
+    .nav-wrapper{
+        padding-right:69px;
+        padding-left:69px; 
+    }
+    nav img{
+        width:120px;
+    }
+    nav ul{
+        padding-top:23px;
+    }
+    nav a {
+        color:black !important;
+        font-weight:bold;
+    }
+    nav a:hover{
+        background-color:transparent !important; 
+    }
+    .rightSide{
+       padding-top:0px !important; 
+    }
+    .media{
+        margin-right:0px !important;
+    }
+    .mediaDrop p{
+      font-size:13px; 
+    }
+    .mediaDrop a:hover{
+        background-color:white !important;
+    }
+    .videoTop{
+        padding-top:60px;
+    }
+
+}
+
+

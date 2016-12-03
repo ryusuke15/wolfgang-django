@@ -33,6 +33,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
     # 3rd-Party Apps
+    'analytical',
+    'djangoseo',
     'rest_framework',
     #My Apps
     'contact',
@@ -142,3 +144,7 @@ REST_FRAMEWORK = {
 #Admin
 ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
 GRAPPELLI_ADMIN_TITLE = 'Wolfgang Admin'
+#Analytics
+# GOOGLE_ANALYTICS_PROPERTY_ID = 'UA-XXXXXX-X'
+# GOOGLE_ANALYTICS_DISPLAY_ADVERTISING = True
+# GOOGLE_ANALYTICS_SITE_SPEED = True
