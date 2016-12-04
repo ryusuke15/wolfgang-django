@@ -1,5 +1,6 @@
 {% load staticfiles %}
 {% load seo %}
+{% load google_analytics %}
 <!DOCTYPE HTML>
 <html lang="en" ng-app="Wolfgang">
 <head>
@@ -15,6 +16,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.min.css">
     <link rel="stylesheet" href='{% static "css/main.css" %}'>
     <link rel="stylesheet" href='{% static "css/style.css" %}'>
+    {% google_analytics %}
 </head>
 <body>
 <!--Mobile/Ipad Navigation  -->
