@@ -1,6 +1,7 @@
 {% load staticfiles %}
 {% load seo %}
 {% load google_analytics %}
+{% load sass_tags %}
 <!DOCTYPE HTML>
 <html lang="en" ng-app="Wolfgang">
 <head>
@@ -15,180 +16,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.min.css">
     <link rel="stylesheet" href='{% static "css/main.css" %}'>
-    <link rel="stylesheet" href='{% static "css/style.css" %}'>
+    <link href="{% sass_src 'css/app.sass' %}" rel="stylesheet" type="text/css" />
     {% google_analytics %}
 </head>
 <body>
-<!--Mobile/Ipad Navigation  -->
-<nav class="transparent z-depth-0 hide-on-large-only">
-    <div class="nav-wrapper">
-      <a href="/" class="brand-logo center">
-        <img src='{% static "img/logo.jpg" %}' class="mobLogo"></a>
-      <ul id="nav-mobile" class="left">
-        <li><a style="color:black;"href="#" data-activates="slide-out" class="button-collapse hide-on-large-only"><i class="material-icons">menu</i></a></li>
-      </ul>
-    </div>
-</nav>
+{% include "navigation_mb.html" %}
 
-<ul id="slide-out"class="center side-nav  z-depth-0">
-    <!--Logo  -->
-    <li>
-        <div class="userView">
-        <a href="/"><img class="responsive-img sideLogo" src="{% static 'img/logo.jpg' %}">
-        </a>
-        </div>
-    </li>
-    <!--  Home    -->
-    <li class="sideNav">
-        <a href="/">
-            HOME
-        </a>
-    </li>
-     <!--About  -->
-    <li class="sideNav">
-        <a href="/about">
-        ABOUT
-        </a>
-    </li>
-   
-    <!--Media  -->
-    <li class="sideNav">
-        <a href="" class='dropdown-button btn white z-depth-0' data-beloworigin="true" data-gutter="15" data-activates='dropdown4'>
-        MEDIA
-        </a>
-    </li>
-    <!-- Media DropMenu     -->
-    <ul id='dropdown4' class='dropdown-content'>
-        <!--Instagram      -->
-        <li class="dropMenu">
-            <a href="http://instagram.com/wolfgangdouglas">
-                <i class="fi-social-instagram"></i>
-                <div>INSTAGRAM</div>
-            </a>
-        </li>
-        <!--Facebook  -->
-        <li class="dropMenu">
-            <a href="https://www.facebook.com/Wolfgang-Douglas-213532462311997/timeline">
-                <i class="fi-social-facebook"></i>
-                <div>FACEBOOK</div>
-            </a>
-        </li>
-
-        <li class="dropMenu">
-            <a href="http://twitter.com/wolfgangdouglas">
-                <i class="fi-social-twitter"></i>
-                <div >TWITTER</div>
-            </a>
-        </li>
-
-    </ul>
-
-    <!--Shop  -->
-    <li class="sideNav">
-        <a href="/shop">
-        SHOP
-        </a>
-    </li>
-    <!--Contact  -->
-    <li class="sideNav">
-        <a href="/contact">
-        CONTACT
-        </a>
-    </li>
-
-    <li class="sideNav" style="padding-top:15px !important;">
-
-        <a style="padding-left:0px;padding-right:0px;display:inline-block;" href="https://open.spotify.com/album/0LDFYNXbeGoYJFoSvx1FR7"> 
-        <img src="{% static 'img/spotify.png' %}" class="responsive-img" style="width:50px;"> 
-        </a>
-
-        <a style="padding-left:0px;padding-right:0px;display:inline-block;" href="http://itunes.apple.com/album/id1065882941">
-        <img src="{% static 'img/apple.png' %}" class="responsive-img" style="width:50px;"> 
-        </a>
-
-        <a href="http://tidal.com/artist/6064733"style="padding-left:0px;padding-right:0px;display:inline-block;">
-        <img src="{% static 'img/tidal.ico' %}" class="responsive-img" style="width:50px;"> 
-        </a> 
-        <a style="padding-left:0px;padding-right:0px;display:inline-block;"href="https://www.youtube.com/channel/UCOD75LoBaFPnylvJjodSZWg">
-        <img src="{% static 'img/youtube.png' %}" class="responsive-img" style="width:50px;"> 
-        </a>
-    </li>
-
-
-</ul>
-
-<!--Desktop Navigation  -->
-<div class="hide-on-med-and-down navbar-fixed">
-<nav class="white z-depth-0">
-    <div class="nav-wrapper">
-
-
-      <a href="/" class="brand-logo center">
-      <img src="static/img/logo.jpg" class="responsive-img">   
-      </a>
-
-      <ul>
-        <li>
-            <a style="padding-right:60px;"href="https://open.spotify.com/album/0LDFYNXbeGoYJFoSvx1FR7">
-                <img style="width:50px;"class="responsive-img"src='{% static "img/spotify.png" %}'> 
-            </a>
-        </li>
-        <li>
-            <a style="padding-right:60px;"href="http://itunes.apple.com/album/id1065882941">
-                <img style="width:50px;"class="responsive-img"src='{% static "img/apple.png" %}'> 
-            </a>
-        </li>
-        <li>
-            <a style="padding-right:60px;" href="http://tidal.com/artist/6064733">
-                <img style="width:50px;"class="responsive-img"src='{% static "img/tidal.ico" %}'> 
-            </a>
-        </li>
-        <li>
-            <a href="https://www.youtube.com/channel/UCOD75LoBaFPnylvJjodSZWg">
-                <img style="width:50px;"class="responsive-img"src='{% static "img/youtube.png" %}'> 
-            </a>
-        </li>
-      </ul>
-
-      <!--Right Side  -->
-      <ul class="right rightSide">
-        <li><a href="/">HOME</a></li>
-        <li><a href="about" style="padding-left:38px;">ABOUT</a></li>
-        <li><a class='media dropdown-button btn white z-depth-0' data-beloworigin="true" data-gutter="15" data-activates='dropdown5' href="">MEDIA</a></li>
-        <li><a href="contact">CONTACT</a></li>
-        <li><a href="shop" style="padding-left:38px">SHOP</a></li>
-      </ul>
-
-    <!-- Media DropMenu     -->
-    <ul id='dropdown5' class='dropdown-content mediaDrop'>
-        <!--Instagram      -->
-        <li>
-            <a class="center"href="http://instagram.com/wolfgangdouglas">
-                <i class="fi-social-instagram"></i>
-                <p>INSTAGRAM</p>
-            </a>
-        </li>
-        <!--Facebook  -->
-        <li>
-            <a class="center" href="https://www.facebook.com/Wolfgang-Douglas-213532462311997/timeline">
-                <i class="fi-social-facebook"></i>
-                <p>FACEBOOK</p>
-            </a>
-        </li>
-
-        <li>
-            <a class="center" href="http://twitter.com/wolfgangdouglas">
-                <i class="fi-social-twitter"></i>
-                <p>TWITTER</p>
-            </a>
-        </li>
-
-    </ul>
-
-
-    </div>
-</nav>
-</div>
+{% include "navigation_lg.html" %} 
 
 <!--Views  -->
  {% block content %}{% endblock content %}
@@ -197,7 +31,7 @@
 <!--Footer  -->
 <footer>
     <div class="center-align">
-    Wolfgang Douglas 2016 Copyright © All rights reserved.
+    Wolfgang Douglas 2017 Copyright © All rights reserved.
     </div>
 </footer>
 
@@ -217,6 +51,9 @@
 <script>
 $( document ).ready(function() {
     $(".button-collapse").sideNav();
+
+    $('.materialboxed').materialbox();
+
     $(".dropdown-button").dropdown({
         constrain_width: false,  
         gutter: 0, 

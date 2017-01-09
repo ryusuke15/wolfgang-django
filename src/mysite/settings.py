@@ -2,16 +2,11 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
-
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '60pdv1l^0p32^jb+iw)88br!wg@73uav^rwo5&(*wy#)og-f&2'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['localhost','34.193.92.3','www.wolfgangdouglas.com','wolfgangdouglas.com']
 
@@ -36,6 +31,7 @@ INSTALLED_APPS = [
     'analytical',
     'djangoseo',
     'rest_framework',
+    'sass_processor',
     #My Apps
     'contact',
 ]
@@ -118,12 +114,19 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_cdn")
 
+#SASS
+SASS_PROCESSOR_ROOT = 'static'
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'sass_processor.finders.CssFinder',
+]
+
 #Media files
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "media_cdn")
 
 #Django-REST 
-
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': (
             'rest_framework.renderers.JSONRenderer',
@@ -138,7 +141,6 @@ REST_FRAMEWORK = {
             'rest_framework.authentication.SessionAuthentication',
             'rest_framework.authentication.BasicAuthentication',
     ),
-
 }
 
 #Admin

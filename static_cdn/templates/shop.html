@@ -9,7 +9,7 @@
     <div ng-repeat="product in products | orderBy:'-id'">
 
     <div class="col s12 center shopSection">
-        <img ng-src="[[ product.image ]]">
+        <img class="responsive-img" ng-src="[[ product.image ]]">
         <h4>[[ product.name ]]</h4>
 
         <h6>$ [[ product.price ]]</h6>

@@ -1,0 +1,105 @@
+{% load staticfiles %}
+<!--Mobile/Ipad Navigation  -->
+<div class="navbar-fixed hide-on-large-only">
+<nav class="white z-depth-0">
+<div class="nav-wrapper">
+      <a href="/" class="brand-logo center">
+        <img src='{% static "img/logo.jpg" %}' class="mobLogo"></a>
+      <ul id="nav-mobile" class="left">
+        <li><a style="color:black;"href="#" data-activates="slide-out" class="button-collapse hide-on-large-only"><i class="material-icons">menu</i></a></li>
+      </ul>
+</div>
+</nav>
+</div>
+<!--SlideOut Menu  -->
+<ul id="slide-out"class="center side-nav z-depth-0">
+
+    <!--Logo Image -->
+    <li>
+        <div class="userView">
+        <a href="/"><img class="responsive-img sideLogo" src="{% static 'img/logo.jpg' %}">
+        </a>
+        </div>
+    </li>
+
+    <!--  Home    -->
+    <li class="sideNav">
+        <a href="/">
+            HOME
+        </a>
+    </li>
+     <!--About  -->
+    <li class="sideNav">
+        <a href="/about">
+        ABOUT
+        </a>
+    </li>
+    <!--Media  -->
+    <li class="sideNav">
+        <a href="" class='dropdown-button btn white z-depth-0' data-beloworigin="true" data-gutter="15" data-activates='dropdown4'>
+        MEDIA
+        </a>
+    </li>
+    <!-- Media DropMenu     -->
+    <ul id='dropdown4' class='dropdown-content'>
+        <!--Instagram      -->
+        <li class="dropMenu">
+            <a href="http://instagram.com/wolfgangdouglas">
+                <i class="fi-social-instagram"></i>
+                <div>INSTAGRAM</div>
+            </a>
+        </li>
+        <!--Facebook  -->
+        <li class="dropMenu">
+            <a href="https://www.facebook.com/Wolfgang-Douglas-213532462311997/timeline">
+                <i class="fi-social-facebook"></i>
+                <div>FACEBOOK</div>
+            </a>
+        </li>
+
+        <li class="dropMenu">
+            <a href="http://twitter.com/wolfgangdouglas">
+                <i class="fi-social-twitter"></i>
+                <div >TWITTER</div>
+            </a>
+        </li>
+
+    </ul>
+
+    <!--Shop  -->
+    <li class="sideNav">
+        <a href="/shop">
+        SHOP
+        </a>
+    </li>
+    <!--Contact  -->
+    <li class="sideNav">
+        <a href="/contact">
+        CONTACT
+        </a>
+    </li>
+
+    <li class="sideIcons">
+
+        <a href="https://open.spotify.com/album/0LDFYNXbeGoYJFoSvx1FR7"> 
+        <img class=""src="{% static 'img/spotify.png' %}"> 
+        </a>
+
+        <a href="http://itunes.apple.com/album/id1065882941">
+        <img src="{% static 'img/apple.png' %}"> 
+        </a>
+
+        <a href="https://itunes.apple.com/album/id1065882941?ls=1&app=itunes">
+        <img src="{% static 'img/itunes.png' %}"> 
+        </a>
+
+        <a href="http://tidal.com/artist/6064733">
+        <img src="{% static 'img/tidal.ico' %}"> 
+        </a> 
+        <a href="https://www.youtube.com/channel/UCOD75LoBaFPnylvJjodSZWg">
+        <img src="{% static 'img/youtube.png' %}"> 
+        </a>
+    </li>
+
+</ul>
+

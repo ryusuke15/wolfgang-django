@@ -1,0 +1,84 @@
+{% load staticfiles %}
+<!--Desktop Navigation  -->
+<div class="hide-on-med-and-down navbar-fixed">
+<nav class="white z-depth-0">
+<div class="nav-wrapper">
+
+      <!--brandLogo  -->
+      <a href="/" class="brand-logo center">
+      <img src="static/img/logo.jpg">   
+      </a>
+
+      <!--Left Side  -->
+      <ul class="navLeft">
+
+        <!--Spotify-->
+        <li>
+            <a href="https://open.spotify.com/album/0LDFYNXbeGoYJFoSvx1FR7">
+                <img src='{% static "img/spotify.png" %}'> 
+            </a>
+        </li>
+        <!--Apple  -->
+        <li>
+            <a href="http://itunes.apple.com/album/id1065882941">
+                <img src='{% static "img/apple.png" %}'> 
+            </a>
+        </li>
+        <!--Itunes  -->
+        <li>
+            <a href="https://itunes.apple.com/album/id1065882941?ls=1&app=itunes">
+                <img src='{% static "img/itunes.png" %}'> 
+            </a>
+        </li>
+        <!-- Tidal -->
+        <li>
+            <a href="http://tidal.com/artist/6064733">
+                <img src='{% static "img/tidal.ico" %}'> 
+            </a>
+        </li>
+        <!-- Youtube  -->
+        <li>
+            <a href="https://www.youtube.com/channel/UCOD75LoBaFPnylvJjodSZWg">
+                <img src='{% static "img/youtube.png" %}'> 
+            </a>
+        </li>
+      </ul>
+
+      <!--Right Side  -->
+      <ul class="right navRight">
+        <li><a href="/">HOME</a></li>
+        <li><a href="about">ABOUT</a></li>
+        <li><a class='dropdown-button btn white z-depth-0' data-beloworigin="true" data-gutter="15" data-activates='dropdown5' href="">MEDIA</a></li>
+
+        <li><a href="contact">CONTACT</a></li>
+        <li><a href="shop">SHOP</a></li>
+      </ul>
+    <!-- Media DropMenu     -->
+    <ul id='dropdown5' class='dropdown-content'>
+        <!--Instagram      -->
+        <li>
+            <a style="color:black;"class="center"href="http://instagram.com/wolfgangdouglas">
+                <i class="fi-social-instagram"></i>
+                <p style="font-size:13px;">INSTAGRAM</p>
+            </a>
+        </li>
+        <!--Facebook  -->
+        <li>
+            <a style="color:black"class="center" href="https://www.facebook.com/Wolfgang-Douglas-213532462311997/timeline">
+                <i class="fi-social-facebook"></i>
+                <p style="font-size:13px;">FACEBOOK</p>
+            </a>
+        </li>
+
+        <li>
+            <a class="center" style="color:black"href="http://twitter.com/wolfgangdouglas">
+                <i class="fi-social-twitter"></i>
+                <p style="font-size:13px;">TWITTER</p>
+            </a>
+        </li>
+    </ul>
+
+
+</div>
+</nav>
+</div>
