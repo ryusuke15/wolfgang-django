@@ -29,6 +29,11 @@ app.factory('Products', function($http) {
 
     var productFactory = {}; 
 
+    productFactory.detail = function(id){
+        return $http.get('/api/contacts/products/' + id);
+
+    };
+
     productFactory.all = function(data){
         return $http.get('/api/contacts/products');
     };

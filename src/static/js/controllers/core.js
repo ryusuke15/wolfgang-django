@@ -4,7 +4,7 @@ var WolfgangApp = angular.module('Wolfgang', [
     'contactCtrl',
     'homeCtrl',
     'shopCtrl',
-    
+    'productCtrl',    
 ]);
 
 WolfgangApp.config([

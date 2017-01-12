@@ -18,6 +18,10 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider){
             url:'/shop',
             templateUrl: 'static/templates/shop.html'
         })
+        .state('product', {
+            url:'/shop/:id',
+            templateUrl : 'static/templates/product.html'
+        })
         .state("otherwise",{ 
             url : '/',
             templateUrl: 'static/templates/home.html'

@@ -1,23 +1,37 @@
 <div ng-controller="shopController">
-<div class="container">
+<div class="container center shopContainer">
 
-        <div class="center comingSoon" style="[[ style ]]">
-            <h1>Coming Soon!</h1>
-        </div>
 
+    <div class="col s12">
+    <div class="center comingSoon" style="[[ style ]]">
+        <h1>Coming Soon!</h1>
+    </div>
+    </div>
 
     <div ng-repeat="product in products | orderBy:'-id'">
 
-    <div class="col s12 center shopSection">
-        <img class="responsive-img" ng-src="[[ product.image ]]">
+        <div class="col s12">
+        <a href="/shop/[[ product.id ]]">  
+        <img class="responsive-img hoverable" ng-src="[[ product.image ]]">
+        </a>
+        </div>
+
+        <div class="col s12">
         <h4>[[ product.name ]]</h4>
+        </div>
 
-        <h6>$ [[ product.price ]]</h6>
+        <div class="col s12">
+        <h5>$ [[ product.price ]]</h5>
+        </div>
 
-        <button type="submit"class="white btn waves-effect waves-light black"><a ng-href="[[ product.link ]]">BUY</a></button>
+
+        <div class="col s12">
+        <div class="shopButton">
+        <a class="white btn-large waves-effect waves-light black" ng-href="[[ product.link ]]">BUY</a>
+        </div>
+        </div>
 
     </div>
 
-    </div>
 </div>
 </div>

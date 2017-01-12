@@ -1,18 +1,15 @@
 <div ng-controller="homeController">
-<div class="container">
-    <div class="videoTop">
+<div class="container homeContainer">
+
     <div ng-repeat="video in videos | orderBy:'-id'">
 
-        <div class="col s12">
+        <div class="col s12 video">
         <div class="video-container">
 
             <iframe width="853" height="480" ng-src='[[getIframeSrc(video.videoId)]]' frameborder="0" allowfullscreen></iframe>
         </div>
         </div>
 
-        <div class="videoSpacing"></div>
-
-    </div>
     </div>
 
 </div>
