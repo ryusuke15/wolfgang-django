@@ -10,4 +10,5 @@ urlpatterns = [
     url(r'^about',home),
     url(r'^contact',home),
     url(r'^shop', home),
+    url(r'^(?P<pk>\d+)/$',home),
 ]
