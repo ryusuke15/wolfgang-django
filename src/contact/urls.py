@@ -10,5 +10,5 @@ urlpatterns = [
     url(r'^about',home),
     url(r'^contact',home),
     url(r'^shop', home),
-    url(r'^(?P<pk>\d+)/$',home),
+    url(r'^shop/(?P<pk>\d+)/$',home),
 ]
