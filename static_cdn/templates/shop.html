@@ -10,7 +10,7 @@
 
     <div ng-repeat="product in products | orderBy:'-id'">
 
-        <div class="col s12">
+        <div class="col s12" id="[[ product.id ]]">
         <a href="/shop/[[ product.id ]]">  
         <img class="responsive-img hoverable" ng-src="[[ product.image ]]">
         </a>
