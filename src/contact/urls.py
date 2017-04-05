@@ -6,9 +6,9 @@ from .views import(
 )
 
 urlpatterns = [
-    url(r'^$', home),
-    url(r'^about',home),
-    url(r'^contact',home),
-    url(r'^shop', home),
+    url(r'^$', home, name="home"),
+    url(r'^about',home, name="about"),
+    url(r'^contact',home, name="contact"),
+    url(r'^shop', home, name="shop"),
     url(r'^shop/(?P<pk>\d+)/$',home),
 ]

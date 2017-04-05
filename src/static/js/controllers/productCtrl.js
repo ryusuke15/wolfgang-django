@@ -8,7 +8,6 @@ app.controller('productController',function(Products,$stateParams,$scope) {
     Products.detail(id)
         .success(function(data){
             $scope.product = data;
-            console.log(data)
         });
  
 });

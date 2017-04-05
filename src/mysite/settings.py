@@ -24,16 +24,18 @@ INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+    'django.contrib.sites', 
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.sites',
     # 3rd-Party Apps
     'analytical',
     'djangoseo',
     'rest_framework',
+    'robots',
     'sass_processor',
     #My Apps
     'contact',
+    'django.contrib.sitemaps',
 ]
 
 SITE_ID = 1
@@ -54,7 +56,7 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, "static/templates")],
+        'DIRS': [os.path.join(BASE_DIR, "templates")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
