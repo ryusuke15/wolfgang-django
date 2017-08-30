@@ -1,0 +1,6 @@
+*.pyc
+*.jpg
+*.png
+migrations
+secrets.py
+media

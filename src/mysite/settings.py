@@ -1,20 +1,30 @@
+"""Django Settings"""
 import os
-
+from mysite.secrets import (
+  DATABASE,
+  EMAIL,
+  GOOGLE,
+  KEY
+)
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '60pdv1l^0p32^jb+iw)88br!wg@73uav^rwo5&(*wy#)og-f&2'
-
+SECRET_KEY = KEY 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost','34.193.92.3','www.wolfgangdouglas.com','wolfgangdouglas.com']
+ALLOWED_HOSTS = [
+    'localhost',
+    '34.193.92.3',
+    'www.wolfgangdouglas.com',
+    'wolfgangdouglas.com'
+]
 
 #Email Settings
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'wolfgangdouglas.mgmt@gmail.com'
-EMAIL_HOST_PASSWORD = 'emfdehjruemcrwju'
-EMAIL_PORT = 587
+EMAIL_HOST = EMAIL['host']
+EMAIL_HOST_USER = EMAIL['user']
+EMAIL_HOST_PASSWORD = EMAIL['password']
+EMAIL_PORT = EMAIL['port']
 EMAIL_USE_TLS = True
 # Application definition
 
@@ -77,10 +87,10 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'wolfgangdouglas',
-        'USER': 'wolfgangdouglasuser',
-        'PASSWORD': 'metapunk443',
-        'HOST': 'localhost',
+        'NAME': DATABASE['name'],
+        'USER': DATABASE['user'],
+        'PASSWORD': DATABASE['password'],
+        'HOST': DATABASE['host'],
         'PORT': '',
     }
 }
